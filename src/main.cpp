@@ -4,7 +4,7 @@
 #include "mylib.hpp"
 
 
-int main (int argc, char** argv)
+int main ()
 {
 
     Point2D P = Point2D("A", 1, 1);

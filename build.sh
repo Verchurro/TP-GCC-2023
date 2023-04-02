@@ -1,26 +1,36 @@
 #!/bin/bash
 
 if [[ $# -eq 0 ]]; then
-  echo "Usage: ./build.sh [-a|--all|-m]"
+  echo "Usage: ./build.sh [-a|-m|-r]"
   exit 1
 fi
 
 current_dir=$(pwd)
 cd "$(dirname "$0")"
 
-if [[ $1 = "-a" || $1 = "--all" ]]; then
-  echo "Deleting existing build directory"
-  rm -rf ./build
-  echo "Creating new build directory"
+if [[ $1 = "-a" ]]; then
+  if [ -d "build" ]; then
+    echo "# Deleting existing build directory"
+    chmod -R 777 "./build"
+    rm -rf ./build
+  fi
+  echo "# Creating new build directory"
   mkdir build
   cd build
-  echo "Running cmake"
+  echo "# Running cmake"
   cmake ..
+  echo "# Building the projet"
   make
-fi
-if [[ $1 = "-m" ]]; then
+elif [[ $1 = "-m" ]]; then
   cd build
+  echo "# Building the projet"
   make
+elif [[ $1 = "-r" ]]; then
+  cd build
+  echo "# Running the projet"
+  ./tp
+else
+  echo "Usage: ./build.sh [-a|-m|-r]"
 fi
 
 cd "$current_dir"

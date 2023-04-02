@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
+
+project(    PROJECT
+            DESCRIPTION "TP noté pour la promotion GCC 2022-2025"
+            LANGUAGES C CXX
+)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Source files
+file(GLOB SOURCES "src/*.cpp")
+file(GLOB HEADERS "include/*.h")
+
+# Add executable target
+add_executable(${CMAKE_PROJECT_NAME} 
+    ${SOURCES} 
+    ${HEADERS}
+)
+
+# Include directories
+target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include
+)

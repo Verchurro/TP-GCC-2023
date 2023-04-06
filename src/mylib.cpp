@@ -1,7 +1,7 @@
 #include "mylib.hpp"
 
 #include <random>
-
+#include <cmath>
 
 int randomInt(int min, int max)
 {
@@ -11,14 +11,40 @@ int randomInt(int min, int max)
     return dis (gen);
 }
 
-void formeCreuse(int x, int y)
-{
 
+void PrintLine(char c, int nbchar)
+{  
+    for(int i = 0; i < nbchar; i++)
+    {
+        std::cout << c;
+    }
+    std::cout << std::endl;
+}
+
+void formeCreuse()
+{
+  int n = 0;
+
+    std::cout <<"Please enter the amount of lines you want printed: ";
+std::cin >>n;
+
+for (int i = 0; i < n; i++)
+{
+    printLine();
+}
+
+}
+
+void printLine()
+{
+    std::cout <<"**************"<< std::endl;
 }
 
 float distanceManhattan(Point2D p1, Point2D p2)
 {
-    return 0.0f;
+    int x = 0;
+    int y = 0
+    return std::sqrt(x*x + y*y);
 }
 
 

@@ -19,4 +19,6 @@ int main ()
     std::cout << "Exemple de point : " << points.at(2) << std::endl;
 
     return 0;
+
+    formeCreuse();
 }

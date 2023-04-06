@@ -8,8 +8,10 @@
 
 int randomInt(int min, int max);
 
-void formeCreuse(int x, int y);
+// @brief Function that prints hollow objects
+void formeCreuse();
 
+// @brief Function that takes two 2D points
 float distanceEuclidienne(Point2D p1, Point2D p2);
 
 float distanceManhattan(Point2D p1, Point2D p2);

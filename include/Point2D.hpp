@@ -38,6 +38,11 @@ struct Point2D
     /// @brief 
     ~Point2D() = default;
 
+    /// @brief Override "=" operator
+    /// @param P An other Point2D
+    /// @return This instance with its new data
+    Point2D& operator=(Point2D P);
+
     /// @fn std::ostream& operator<<(std::ostream&, const Point2D&)
     /// @brief 
     /// @param[in] os output stream where characters are written

@@ -62,9 +62,10 @@ void plusOuMoins()
 {
     int min = 1;
     int max = 100;
-    int guess, number, tries;
+    int PlayerGuess, number, tries;
     number = randomInt(1, 100);
     tries = randomInt (5, 15);
+    int guesses = 0;
     bool PlayAgain = true;
 
        while(PlayAgain){
@@ -74,25 +75,28 @@ void plusOuMoins()
     do
     {
          std::cout << "Enter a number: ";
-	     std::cin >> guess;
+	     std::cin >> PlayerGuess;
 		 tries++;
          
-		if (guess > number)
+		if (PlayerGuess > number)
         {
 			std::cout << "Too high! You have "<< --tries<< " tries left!" <<std::endl;
             --tries;
+            guesses++;
         }
-		else if (guess < number)
+		else if (PlayerGuess < number)
         {
 			std::cout << "Too low! You have "<< --tries<< " tries left!"<<std::endl;
             --tries;
+            guesses++;
         }
 		else
         {
-			std::cout << "Correct! You got it in " << tries << " tries!" <<std::endl;
+			std::cout << "Correct! You got it in " << guesses << " tries!" <<std::endl;
         }
+       
 	} 
-    while (guess != number);
+    while (PlayerGuess != number);
         
          std::cout << "\nWant to play again (y / n)?" ;
 
@@ -102,8 +106,16 @@ void plusOuMoins()
     {
         PlayAgain = false;
     }
-      return;
-  }
+      return;    
+ }     
+ 
+ void lost();
+ {
+    if (tries <= 0)
+      {
+          std::cout << "Sorry, you're out of guesses!" <<std::endl;
+      }
+    }
 }
 
 

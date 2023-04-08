@@ -24,11 +24,11 @@ std::cin >>lines;
 
 for (int i = 0; i < lines; i++)
 {
-    for (int i = 0; i < chars; i++)
+    for (int j = 0; j < chars; i++)
     {
         if (lines == 1)
         {
-            
+
         }
     }
 }

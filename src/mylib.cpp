@@ -94,8 +94,11 @@ void plusOuMoins()
         {
 			std::cout << "Correct! You got it in " << guesses << " tries!" <<std::endl;
         }
-       
-	} 
+        if (tries <= 0)
+      {
+          std::cout << "Sorry, you're out of guesses!" <<std::endl;
+      }
+    } 
     while (PlayerGuess != number);
         
          std::cout << "\nWant to play again (y / n)?" ;
@@ -105,17 +108,12 @@ void plusOuMoins()
     if (tolower(answer) != 'y')
     {
         PlayAgain = false;
+        return;
+    } else{
+        plusOuMoins();
     }
-      return;    
  }     
  
- void lost();
- {
-    if (tries <= 0)
-      {
-          std::cout << "Sorry, you're out of guesses!" <<std::endl;
-      }
-    }
 }
 
 

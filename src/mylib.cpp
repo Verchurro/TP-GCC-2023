@@ -14,15 +14,23 @@ int randomInt(int min, int max)
 void formeCreuse(int i, int j)
 {
     char character = '*';
+    int lines;
+    int chars;
 
     std::cout <<"Please enter the amount of characters you want printed: ";
-std::cin >>i;
+std::cin >>chars;
  std::cout <<"Please enter the amount of lines you want printed: ";
-std::cin >>j;
+std::cin >>lines;
 
-for (int i = 0; i < j; i++)
+for (int i = 0; i < lines; i++)
 {
-    printLine();
+    for (int i = 0; i < chars; i++)
+    {
+        if (lines == 1)
+        {
+            
+        }
+    }
 }
 
 }

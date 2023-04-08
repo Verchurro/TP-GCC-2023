@@ -11,24 +11,16 @@ int randomInt(int min, int max)
     return dis (gen);
 }
 
-
-void PrintLine(char c, int nbchar)
-{  
-    for(int i = 0; i < nbchar; i++)
-    {
-        std::cout << c;
-    }
-    std::cout << std::endl;
-}
-
-void formeCreuse()
+void formeCreuse(int i, int j)
 {
-  int n = 0;
+    char character = '*';
 
-    std::cout <<"Please enter the amount of lines you want printed: ";
-std::cin >>n;
+    std::cout <<"Please enter the amount of characters you want printed: ";
+std::cin >>i;
+ std::cout <<"Please enter the amount of lines you want printed: ";
+std::cin >>j;
 
-for (int i = 0; i < n; i++)
+for (int i = 0; i < j; i++)
 {
     printLine();
 }
@@ -52,7 +44,7 @@ float distanceEuclidienne(Point2D p1, Point2D p2)
 
 void plusProcheVoisin(std::vector<Point2D> points, Point2D P, int dist)
 {
-
+    
 }
 
 void plusOuMoins()

@@ -76,7 +76,6 @@ void plusOuMoins()
     {
          std::cout << "Enter a number: ";
 	     std::cin >> PlayerGuess;
-		 tries++;
          
 		if (PlayerGuess > number)
         {
@@ -97,6 +96,7 @@ void plusOuMoins()
         if (tries <= 0)
       {
           std::cout << "Sorry, you're out of guesses!" <<std::endl;
+          return;
       }
     } 
     while (PlayerGuess != number);
@@ -105,6 +105,7 @@ void plusOuMoins()
 
           char answer;
     std::cin >> answer;
+    
     if (tolower(answer) != 'y')
     {
         PlayAgain = false;

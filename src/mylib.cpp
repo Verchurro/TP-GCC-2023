@@ -55,10 +55,57 @@ float distanceEuclidienne(Point2D p1, Point2D p2)
 
 void plusProcheVoisin(std::vector<Point2D> points, Point2D P, int dist)
 {
-    
+   // Point2D P = Point2D("A", 1, 1);
 }
 
 void plusOuMoins()
 {
+    int min = 1;
+    int max = 100;
+    int guess, number, tries;
+    number = randomInt(1, 100);
+    tries = randomInt (5, 15);
+    bool PlayAgain = true;
 
+       while(PlayAgain){
+
+       
+        std::cout <<"Can you guess which number between 1 and 100 that I'm thinking of? You have " << tries<< " tries! ";
+    do
+    {
+         std::cout << "Enter a number: ";
+	     std::cin >> guess;
+		 tries++;
+         
+		if (guess > number)
+        {
+			std::cout << "Too high! You have "<< --tries<< " tries left!" <<std::endl;
+            --tries;
+        }
+		else if (guess < number)
+        {
+			std::cout << "Too low! You have "<< --tries<< " tries left!"<<std::endl;
+            --tries;
+        }
+		else
+        {
+			std::cout << "Correct! You got it in " << tries << " tries!" <<std::endl;
+        }
+	} 
+    while (guess != number);
+        
+         std::cout << "\nWant to play again (y / n)?" ;
+
+          char answer;
+    std::cin >> answer;
+    if (tolower(answer) != 'y')
+    {
+        PlayAgain = false;
+    }
+      return;
+  }
 }
+
+
+
+   

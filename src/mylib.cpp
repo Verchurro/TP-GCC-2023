@@ -42,15 +42,20 @@ void printLine()
 
 float distanceManhattan(Point2D p1, Point2D p2)
 {
-    int x = 0;
-    int y = 0
-    return std::sqrt(x*x + y*y);
+        return 0.0f;
 }
 
+  void Vectors() 
+ {
+   int x = 0;
+    int y = 0;
+ }
+  
 
 float distanceEuclidienne(Point2D p1, Point2D p2)
 {
-    return 0.0f;
+
+    return std::sqrt(pow(p1.x + p2.x,2));
 }
 
 void plusProcheVoisin(std::vector<Point2D> points, Point2D P, int dist)

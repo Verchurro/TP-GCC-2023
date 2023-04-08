@@ -11,8 +11,9 @@ int randomInt(int min, int max)
     return dis (gen);
 }
 
-void formeCreuse(int i, int j)
+void formeCreuse()
 {
+     char empty = ' ';
     char character = '*';
     int lines;
     int chars;
@@ -24,20 +25,22 @@ std::cin >>lines;
 
 for (int i = 0; i < lines; i++)
 {
-    for (int j = 0; j < chars; i++)
+    for (int j = 0; j < chars; j++)
     {
-        if (lines == 1)
+        if (i == 0 || i == lines-1)
         {
-
+            std::cout << character;
         }
-    }
+        else if (j == 0 || j == chars-1)
+        {
+            std::cout << character;
+        }
+        else{
+             std::cout << empty;
+        }
+    } std::cout << std::endl;
 }
 
-}
-
-void printLine()
-{
-    std::cout <<"**************"<< std::endl;
 }
 
 float distanceManhattan(Point2D p1, Point2D p2)
